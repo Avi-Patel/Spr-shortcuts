@@ -1,16 +1,24 @@
 import * as vscode from "vscode";
 
+import { currentDate } from "./commands/currentDate";
+import { insertReactLibs } from "./commands/insertReactLibs";
+import { insertActionComponent } from "./commands/insertActionComponent";
+
 export function activate(context: vscode.ExtensionContext) {
   context.subscriptions.push(
-    vscode.commands.registerCommand("spr-shortcuts.search", () => {
-      vscode.window.showOpenDialog();
+    vscode.commands.registerCommand("spr-shortcuts.hello", () => {
+      vscode.window.showInformationMessage("Hey there!");
     })
   );
 
+  const currentDateCommand = currentDate();
+  const insertReactLibsCommand = insertReactLibs();
+  const insertActionComponentCommand = insertActionComponent();
+
   context.subscriptions.push(
-    vscode.commands.registerCommand("spr-shortcuts.getDate", () => {
-      vscode.window.showInformationMessage(new Date().toDateString());
-    })
+    currentDateCommand,
+    insertReactLibsCommand,
+    insertActionComponentCommand
   );
 }
 

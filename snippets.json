@@ -1,3 +1,62 @@
 {
-   
+   "Insert memo code": {
+    "scope": "javascript,typescript,javascriptreact,typescriptreact",
+    "prefix": "ExportMemoed",
+    "description": "Insert code block for component memoisation",
+    "body": [
+      "const Memoed = memo(Component);",
+      "Memoed.displayName = 'Component';",
+      "export { Memoed as Component };"
+    ]
+  },
+  "Insert useCallback": {
+    "scope": "javascript,typescript,javascriptreact,typescriptreact",
+    "prefix": "insertUseCallback",
+    "description": "Insert code block for useCallback",
+    "body": [
+      "const funName  = useCallback(()=> {",
+      "",
+      "},",
+      "[]",
+      ");"
+    ]
+  },
+  "Insert useMemo": {
+    "scope": "javascript,typescript,javascriptreact,typescriptreact",
+    "prefix": "insertUseMemo",
+    "description": "Insert code block for useCallback",
+    "body": [
+      "const varName = useMemo(()=> {",
+      "",
+      "},",
+      "[]",
+      ");"
+    ]
+  },
+  "Insert Lazy Load":{
+    "scope": "javascript,typescript,javascriptreact,typescriptreact",
+    "prefix": "insertLazyLoad",
+    "description": "Insert code block for lazy load",
+    "body": [
+      "import dynamic from 'next/dynamic';",
+      "",
+      "import { withLoadNamespaces } from '@sprinklr/modules/infra/hocs/withLoadNamespace'",
+      "import { wrapWithSuspense } from '@sprinklr/modules/infra/hocs/wrapWithSuspense'",
+      "",
+      "import { Tombstone } from './Tombstone';",
+      "",
+      "const DynamicComponent = dynamic(",
+      "  () => import(/* webpackChunkName: 'chunk-name' */ './path'),",
+      "  {",
+      "     loading: withLoadNamespaces([])(",
+      "         Tombstone",
+      "    ),",
+      "  }",
+      ");",
+      "",
+      "const Component = wrapWithSuspense(Tombstone)(DynamicComponent);",
+      "",
+      "export { Component };"
+    ]
+  }
 }

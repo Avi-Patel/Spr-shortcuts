@@ -2,6 +2,9 @@
   "name": "spr-shortcuts",
   "displayName": "spr-shortcuts",
   "description": "make development faster",
+  "repository": {
+    "url": "https://prod-gitlab.sprinklr.com/avi.patel/spr-shortcuts"
+  },
   "version": "0.0.1",
   "engines": {
     "vscode": "^1.71.0"
@@ -10,19 +13,47 @@
     "Other"
   ],
   "activationEvents": [
-    "onCommand:spr-shortcuts.search",
-    "onCommand:spr-shortcuts.getTime"
+    "onCommand:spr-shortcuts.hello",
+    "onCommand:spr-shortcuts.getDate",
+    "onCommand:spr-shortcuts.reactLibs",
+    "onCommand:spr-shortcuts.actionComponent"
   ],
   "main": "./out/extension.js",
   "contributes": {
     "commands": [
       {
-        "command": "spr-shortcuts.search",
-        "title": "search"
+        "command": "spr-shortcuts.hello",
+        "title": "hello"
       },
       {
         "command": "spr-shortcuts.getDate",
         "title": "get current date"
+      },
+      {
+        "command": "spr-shortcuts.reactLibs",
+        "title": "Insert React libs"
+      },
+      {
+        "command": "spr-shortcuts.actionComponent",
+        "title": "Insert Action Component"
+      }
+    ],
+    "snippets": [
+      {
+        "language": "javascript",
+        "path": "snippets.json"
+      },
+      {
+        "language": "typescript",
+        "path": "snippets.json"
+      },
+      {
+        "language": "javascriptreact",
+        "path": "snippets.json"
+      },
+      {
+        "language": "typescriptreact",
+        "path": "snippets.json"
       }
     ]
   },
