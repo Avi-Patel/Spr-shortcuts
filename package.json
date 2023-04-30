@@ -16,7 +16,8 @@
     "onCommand:spr-shortcuts.hello",
     "onCommand:spr-shortcuts.getDate",
     "onCommand:spr-shortcuts.reactLibs",
-    "onCommand:spr-shortcuts.actionComponent"
+    "onCommand:spr-shortcuts.actionComponent",
+    "onCommand:spr-shortcuts.switchLiteEnv"
   ],
   "main": "./out/extension.js",
   "contributes": {
@@ -36,6 +37,10 @@
       {
         "command": "spr-shortcuts.actionComponent",
         "title": "Insert Action Component"
+      },
+      {
+        "command": "spr-shortcuts.switchLiteEnv",
+        "title": "Switch Lite Env"
       }
     ],
     "snippets": [
