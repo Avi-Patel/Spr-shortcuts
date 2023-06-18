@@ -5,6 +5,7 @@
   "repository": {
     "url": "https://prod-gitlab.sprinklr.com/avi.patel/spr-shortcuts"
   },
+  "publisher": "Avi Patel",
   "version": "0.0.1",
   "engines": {
     "vscode": "^1.71.0"
@@ -16,8 +17,8 @@
     "onCommand:spr-shortcuts.hello",
     "onCommand:spr-shortcuts.getDate",
     "onCommand:spr-shortcuts.reactLibs",
-    "onCommand:spr-shortcuts.actionComponent",
-    "onCommand:spr-shortcuts.switchLiteEnv"
+    "onCommand:spr-shortcuts.switchLiteEnv",
+    "onCommand:spr-shortcuts.insertMemoComponent"
   ],
   "main": "./out/extension.js",
   "contributes": {
@@ -35,12 +36,12 @@
         "title": "Insert React libs"
       },
       {
-        "command": "spr-shortcuts.actionComponent",
-        "title": "Insert Action Component"
-      },
-      {
         "command": "spr-shortcuts.switchLiteEnv",
         "title": "Switch Lite Env"
+      },
+      {
+        "command": "spr-shortcuts.insertMemoComponent",
+        "title":"Insert Memo Component"
       }
     ],
     "snippets": [

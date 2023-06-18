@@ -1,14 +1,4 @@
 {
-   "Insert memo code": {
-    "scope": "javascript,typescript,javascriptreact,typescriptreact",
-    "prefix": "ExportMemoed",
-    "description": "Insert code block for component memoisation",
-    "body": [
-      "const Memoed = memo(Component);",
-      "Memoed.displayName = 'Component';",
-      "export { Memoed as Component };"
-    ]
-  },
   "Insert useCallback": {
     "scope": "javascript,typescript,javascriptreact,typescriptreact",
     "prefix": "insertUseCallback",

@@ -2,8 +2,8 @@ import * as vscode from "vscode";
 
 import { currentDate } from "./commands/currentDate";
 import { insertReactLibs } from "./commands/insertReactLibs";
-import { insertActionComponent } from "./commands/insertActionComponent";
 import { switchLiteEnv } from "./commands/switchLiteEnv";
+import { insertMemoComponent } from "./commands/insertMemoComponent";
 
 export async function activate(context: vscode.ExtensionContext) {
   context.subscriptions.push(
@@ -14,15 +14,15 @@ export async function activate(context: vscode.ExtensionContext) {
 
   const currentDateCommand = currentDate();
   const insertReactLibsCommand = insertReactLibs();
-  const insertActionComponentCommand = insertActionComponent();
 
   const switchLiteEnvCommand = await switchLiteEnv();
+  const insertMemoComponentCommand = await insertMemoComponent();
 
   context.subscriptions.push(
     currentDateCommand,
     insertReactLibsCommand,
-    insertActionComponentCommand,
-    switchLiteEnvCommand
+    switchLiteEnvCommand,
+    insertMemoComponentCommand
   );
 }
 
